@@ -2056,11 +2056,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hai\\AppData\\Local\\SkillSwap\\SkillSwap.Api\\SkillSwap.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Api\\SkillSwap.Api.csproj",
       "projectName": "SkillSwap.Api",
-      "projectPath": "C:\\Users\\Hai\\AppData\\Local\\SkillSwap\\SkillSwap.Api\\SkillSwap.Api.csproj",
+      "projectPath": "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Api\\SkillSwap.Api.csproj",
       "packagesPath": "C:\\Users\\Hai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hai\\AppData\\Local\\SkillSwap\\SkillSwap.Api\\obj\\",
+      "outputPath": "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hai\\AppData\\Roaming\\NuGet\\NuGet.Config"

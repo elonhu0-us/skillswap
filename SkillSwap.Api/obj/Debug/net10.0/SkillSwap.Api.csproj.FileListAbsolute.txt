@@ -241,3 +241,12 @@ C:\Users\Hai\Documents\skillswap\SkillSwap.Api\obj\Debug\net10.0\refint\SkillSwa
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\obj\Debug\net10.0\SkillSwap.Api.pdb
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\obj\Debug\net10.0\SkillSwap.Api.genruntimeconfig.cache
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\obj\Debug\net10.0\ref\SkillSwap.Api.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\BCrypt.Net-Next.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll

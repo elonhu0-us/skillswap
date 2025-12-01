@@ -10,7 +10,7 @@ interface AuthResponse {
   providedIn: 'root'
 })
 export class AuthService {
-    private apiUrl = 'https://api/auth';
+    private apiUrl = '/api/auth';;
 
     constructor(private http: HttpClient) { }
 

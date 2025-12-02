@@ -21,7 +21,7 @@ export class RegisterComponent {
             passwordHash: this.password
         }).subscribe({
             next: (res) => {
-                console.log("Registration successful", res);
+                alert("Registration successful");
             },
             error: (err) => {
                 console.error("Registration failed", err);

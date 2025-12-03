@@ -12,5 +12,6 @@ namespace SkillSwap.Api.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<SkillPost> SkillPosts { get; set; }
+        public DbSet<UserLocationCache> UserLocationCaches { get; set; }
     }
 }

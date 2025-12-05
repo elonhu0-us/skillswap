@@ -18,26 +18,39 @@ public class LocationController : ControllerBase
     public async Task<IActionResult> UpdateLocation([FromBody] LocationRequest req)
     {
         var userId = GetUserIdFromJwt();
-        if (userId == null) return Unauthorized();
+        if (userId == null)
+            return Unauthorized();
 
-        var existingLoc = await _context.UserLocationCaches
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+        if (user == null)
+            return NotFound();
+
+        // Update user entity
+        user.Latitude = req.Lat;
+        user.Longitude = req.Lng;
+        user.LocationUpdatedAt = DateTime.UtcNow;
+
+        // Update / insert cache
+        var cache = await _context.UserLocationCaches
             .FirstOrDefaultAsync(x => x.UserId == userId);
 
-        if (existingLoc == null)
+        if (cache == null)
         {
-            _context.UserLocationCaches.Add(new UserLocationCache
+            cache = new UserLocationCache
             {
                 UserId = userId.Value,
                 Latitude = req.Lat,
                 Longitude = req.Lng,
                 UpdatedAt = DateTime.UtcNow
-            });
+            };
+
+            _context.UserLocationCaches.Add(cache);
         }
         else
         {
-            existingLoc.Latitude = req.Lat;
-            existingLoc.Longitude = req.Lng;
-            existingLoc.UpdatedAt = DateTime.UtcNow;
+            cache.Latitude = req.Lat;
+            cache.Longitude = req.Lng;
+            cache.UpdatedAt = DateTime.UtcNow;
         }
 
         await _context.SaveChangesAsync();
@@ -47,6 +60,8 @@ public class LocationController : ControllerBase
 
     private int? GetUserIdFromJwt()
     {
+        if (User?.Claims == null) return null;
+
         var claim = User.Claims.FirstOrDefault(c => c.Type == "id");
         return claim != null ? int.Parse(claim.Value) : null;
     }

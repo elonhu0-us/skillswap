@@ -187,18 +187,18 @@
           }
         }
       },
-      "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
+      "Microsoft.Extensions.Caching.Abstractions/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "9.0.0"
+          "Microsoft.Extensions.Primitives": "10.0.0"
         },
         "compile": {
-          "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+          "lib/net10.0/Microsoft.Extensions.Caching.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+          "lib/net10.0/Microsoft.Extensions.Caching.Abstractions.dll": {
             "related": ".xml"
           }
         },
@@ -227,6 +227,25 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "10.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
+          "Microsoft.Extensions.Options": "10.0.0",
+          "StackExchange.Redis": "2.7.27"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/9.0.0": {
@@ -414,15 +433,15 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.0": {
         "type": "package",
         "compile": {
-          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
@@ -627,18 +646,18 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/9.0.0": {
+      "Microsoft.Extensions.Logging.Abstractions/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0"
         },
         "compile": {
-          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+          "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+          "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll": {
             "related": ".xml"
           }
         },
@@ -762,19 +781,19 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Options/9.0.0": {
+      "Microsoft.Extensions.Options/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Primitives": "9.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0",
+          "Microsoft.Extensions.Primitives": "10.0.0"
         },
         "compile": {
-          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+          "lib/net10.0/Microsoft.Extensions.Options.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+          "lib/net10.0/Microsoft.Extensions.Options.dll": {
             "related": ".xml"
           }
         },
@@ -805,15 +824,15 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Primitives/9.0.0": {
+      "Microsoft.Extensions.Primitives/10.0.0": {
         "type": "package",
         "compile": {
-          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+          "lib/net10.0/Microsoft.Extensions.Primitives.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+          "lib/net10.0/Microsoft.Extensions.Primitives.dll": {
             "related": ".xml"
           }
         },
@@ -1222,6 +1241,19 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Pomelo.EntityFrameworkCore.MySql/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -1235,6 +1267,24 @@
         },
         "runtime": {
           "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "StackExchange.Redis/2.10.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Pipelines.Sockets.Unofficial": "2.2.8",
+          "System.IO.Hashing": "9.0.10"
+        },
+        "compile": {
+          "lib/net8.0/StackExchange.Redis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/StackExchange.Redis.dll": {
             "related": ".xml"
           }
         }
@@ -1280,6 +1330,22 @@
           "lib/net9.0/System.IdentityModel.Tokens.Jwt.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Hashing/9.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "xunit/2.9.3": {
@@ -1386,7 +1452,9 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",
-          "Pomelo.EntityFrameworkCore.MySql": "9.0.0"
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.0",
+          "Pomelo.EntityFrameworkCore.MySql": "9.0.0",
+          "StackExchange.Redis": "2.10.1"
         },
         "compile": {
           "bin/placeholder/SkillSwap.Api.dll": {}
@@ -1708,21 +1776,22 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
-      "sha512": "FPWZAa9c0H4dvOj351iR1jkUIs4u9ykL4Bm592yhjDyO5lCoWd+TMAHx2EMbarzUvCvgjWjJIoC6//Q9kH6YhA==",
+    "Microsoft.Extensions.Caching.Abstractions/10.0.0": {
+      "sha512": "Zcoy6H9mSoGyvr7UvlGokEZrlZkcPCICPZr8mCsSt9U/N8eeCwCXwKF5bShdA66R0obxBCwP4AxomQHvVkC/uA==",
       "type": "package",
-      "path": "microsoft.extensions.caching.abstractions/9.0.0",
+      "path": "microsoft.extensions.caching.abstractions/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/Microsoft.Extensions.Caching.Abstractions.targets",
         "buildTransitive/net462/_._",
         "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Caching.Abstractions.targets",
+        "lib/net10.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/net10.0/Microsoft.Extensions.Caching.Abstractions.xml",
         "lib/net462/Microsoft.Extensions.Caching.Abstractions.dll",
         "lib/net462/Microsoft.Extensions.Caching.Abstractions.xml",
         "lib/net8.0/Microsoft.Extensions.Caching.Abstractions.dll",
@@ -1731,7 +1800,7 @@
         "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.xml",
-        "microsoft.extensions.caching.abstractions.9.0.0.nupkg.sha512",
+        "microsoft.extensions.caching.abstractions.10.0.0.nupkg.sha512",
         "microsoft.extensions.caching.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1762,6 +1831,26 @@
         "microsoft.extensions.caching.memory.9.0.0.nupkg.sha512",
         "microsoft.extensions.caching.memory.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.0": {
+      "sha512": "LTduPLaoP8T8I/SEKTEks7a7ZCnqlGmX6/7Y4k/nFlbKFsv8oLxhLQ44ktF9ve0lAmEGkLuuvRhunG/LQuhP7Q==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.stackexchangeredis/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "lib/net462/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/net462/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "microsoft.extensions.caching.stackexchangeredis.10.0.0.nupkg.sha512",
+        "microsoft.extensions.caching.stackexchangeredis.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration/9.0.0": {
@@ -2035,21 +2124,22 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
-      "sha512": "+6f2qv2a3dLwd5w6JanPIPs47CxRbnk+ZocMJUhv9NxP88VlOcJYZs9jY+MYSjxvady08bUZn6qgiNh7DadGgg==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.0": {
+      "sha512": "L3AdmZ1WOK4XXT5YFPEwyt0ep6l8lGIPs7F5OOBZc77Zqeo01Of7XXICy47628sdVl0v/owxYJTe86DTgFwKCA==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.0",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
         "buildTransitive/net462/_._",
         "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
@@ -2060,7 +2150,7 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2321,15 +2411,14 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/9.0.0": {
-      "sha512": "g0UfujELzlLbHoVG8kPKVBaW470Ewi+jnptGS9KUi6jcb+k2StujtK3m26DFSGGwQ/+bVgZfsWqNzlP6YOejvw==",
+    "Microsoft.Extensions.Logging.Abstractions/10.0.0": {
+      "sha512": "FU/IfjDfwaMuKr414SSQNTIti/69bHEMb+QKrskRb26oVqpx3lNFXMjs/RC9ZUuhBhcwDM2BwOgoMw+PZ+beqQ==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/9.0.0",
+      "path": "microsoft.extensions.logging.abstractions/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "analyzers/dotnet/roslyn3.11/cs/Microsoft.Extensions.Logging.Generators.dll",
@@ -2379,6 +2468,8 @@
         "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets",
         "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.Abstractions.targets",
         "buildTransitive/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.targets",
+        "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.xml",
         "lib/net462/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/net462/Microsoft.Extensions.Logging.Abstractions.xml",
         "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll",
@@ -2387,7 +2478,7 @@
         "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.10.0.0.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2529,15 +2620,14 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Options/9.0.0": {
-      "sha512": "y2146b3jrPI3Q0lokKXdKLpmXqakYbDIPDV6r3M8SqvSf45WwOTzkyfDpxnZXJsJQEpAsAqjUq5Pu8RCJMjubg==",
+    "Microsoft.Extensions.Options/10.0.0": {
+      "sha512": "8oCAgXOow5XDrY9HaXX1QmH3ORsyZO/ANVHBlhLyCeWTH5Sg4UuqZeOTWJi6484M+LqSx0RqQXDJtdYy2BNiLQ==",
       "type": "package",
-      "path": "microsoft.extensions.options/9.0.0",
+      "path": "microsoft.extensions.options/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Options.SourceGeneration.dll",
@@ -2559,6 +2649,8 @@
         "buildTransitive/net8.0/Microsoft.Extensions.Options.targets",
         "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Options.targets",
         "buildTransitive/netstandard2.0/Microsoft.Extensions.Options.targets",
+        "lib/net10.0/Microsoft.Extensions.Options.dll",
+        "lib/net10.0/Microsoft.Extensions.Options.xml",
         "lib/net462/Microsoft.Extensions.Options.dll",
         "lib/net462/Microsoft.Extensions.Options.xml",
         "lib/net8.0/Microsoft.Extensions.Options.dll",
@@ -2569,7 +2661,7 @@
         "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
         "lib/netstandard2.1/Microsoft.Extensions.Options.dll",
         "lib/netstandard2.1/Microsoft.Extensions.Options.xml",
-        "microsoft.extensions.options.9.0.0.nupkg.sha512",
+        "microsoft.extensions.options.10.0.0.nupkg.sha512",
         "microsoft.extensions.options.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -2602,21 +2694,22 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Primitives/9.0.0": {
-      "sha512": "N3qEBzmLMYiASUlKxxFIISP4AiwuPTHF5uCh+2CWSwwzAJiIYx0kBJsS30cp1nvhSySFAVi30jecD307jV+8Kg==",
+    "Microsoft.Extensions.Primitives/10.0.0": {
+      "sha512": "inRnbpCS0nwO/RuoZIAqxQUuyjaknOOnCEZB55KSMMjRhl0RQDttSmLSGsUJN3RQ3ocf5NDLFd2mOQViHqMK5w==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/9.0.0",
+      "path": "microsoft.extensions.primitives/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/Microsoft.Extensions.Primitives.targets",
         "buildTransitive/net462/_._",
         "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Primitives.targets",
+        "lib/net10.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net10.0/Microsoft.Extensions.Primitives.xml",
         "lib/net462/Microsoft.Extensions.Primitives.dll",
         "lib/net462/Microsoft.Extensions.Primitives.xml",
         "lib/net8.0/Microsoft.Extensions.Primitives.dll",
@@ -2625,7 +2718,7 @@
         "lib/net9.0/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.9.0.0.nupkg.sha512",
+        "microsoft.extensions.primitives.10.0.0.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -3043,6 +3136,29 @@
         "packageIcon.png"
       ]
     },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "sha512": "zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "type": "package",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Pipelines.Sockets.Unofficial.dll",
+        "lib/net461/Pipelines.Sockets.Unofficial.xml",
+        "lib/net472/Pipelines.Sockets.Unofficial.dll",
+        "lib/net472/Pipelines.Sockets.Unofficial.xml",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.xml",
+        "pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+        "pipelines.sockets.unofficial.nuspec"
+      ]
+    },
     "Pomelo.EntityFrameworkCore.MySql/9.0.0": {
       "sha512": "cl7S4s6CbJno0LjNxrBHNc2xxmCliR5i40ATPZk/eTywVaAbHCbdc9vbGc3QThvwGjHqrDHT8vY9m1VF/47o0g==",
       "type": "package",
@@ -3056,6 +3172,30 @@
         "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.xml",
         "pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512",
         "pomelo.entityframeworkcore.mysql.nuspec"
+      ]
+    },
+    "StackExchange.Redis/2.10.1": {
+      "sha512": "se08WZvD42H3bV4XBW07pupTiE2/72qStKyi/lRqqcijksFWfRtwLTuhFtZ4OX19f4+we/2qruFZBXYJBFc8PQ==",
+      "type": "package",
+      "path": "stackexchange.redis/2.10.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net461/StackExchange.Redis.dll",
+        "lib/net461/StackExchange.Redis.xml",
+        "lib/net472/StackExchange.Redis.dll",
+        "lib/net472/StackExchange.Redis.xml",
+        "lib/net6.0/StackExchange.Redis.dll",
+        "lib/net6.0/StackExchange.Redis.xml",
+        "lib/net8.0/StackExchange.Redis.dll",
+        "lib/net8.0/StackExchange.Redis.xml",
+        "lib/netcoreapp3.1/StackExchange.Redis.dll",
+        "lib/netcoreapp3.1/StackExchange.Redis.xml",
+        "lib/netstandard2.0/StackExchange.Redis.dll",
+        "lib/netstandard2.0/StackExchange.Redis.xml",
+        "stackexchange.redis.2.10.1.nupkg.sha512",
+        "stackexchange.redis.nuspec"
       ]
     },
     "System.Diagnostics.EventLog/9.0.0": {
@@ -3113,6 +3253,34 @@
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
         "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
+      ]
+    },
+    "System.IO.Hashing/9.0.10": {
+      "sha512": "9gv5z71xaWWmcGEs4bXdreIhKp2kYLK2fvPK5gQkgnWMYvZ8ieaxKofDjxL3scZiEYfi/yW2nJTiKV2awcWEdA==",
+      "type": "package",
+      "path": "system.io.hashing/9.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.IO.Hashing.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.IO.Hashing.targets",
+        "lib/net462/System.IO.Hashing.dll",
+        "lib/net462/System.IO.Hashing.xml",
+        "lib/net8.0/System.IO.Hashing.dll",
+        "lib/net8.0/System.IO.Hashing.xml",
+        "lib/net9.0/System.IO.Hashing.dll",
+        "lib/net9.0/System.IO.Hashing.xml",
+        "lib/netstandard2.0/System.IO.Hashing.dll",
+        "lib/netstandard2.0/System.IO.Hashing.xml",
+        "system.io.hashing.9.0.10.nupkg.sha512",
+        "system.io.hashing.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "xunit/2.9.3": {

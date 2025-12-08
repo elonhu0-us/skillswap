@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using SkillSwap.Api.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Caching.StackExchangeRedis;
+using StackExchange.Redis;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,20 @@ var conn = builder.Configuration.GetConnectionString("DefaultConnection")
            ?? "Server=127.0.0.1;Port=3306;Database=skillswap;User=root;Password=Passw0rd!;";
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(conn, ServerVersion.AutoDetect(conn)));
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+});
+// Redis connection multiplexer
+builder.Services.AddSingleton(sp =>
+{
+    var cfg = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"));
+    return ConnectionMultiplexer.Connect(cfg);
+});
+
+// register cache + skill service
+builder.Services.AddScoped<SkillSwap.Api.Services.Skill.ISkillService, SkillSwap.Api.Services.Skill.SkillService>();
+builder.Services.AddScoped<SkillSwap.Api.Services.Location.ILocationCacheService, SkillSwap.Api.Services.Location.RedisLocationCacheService>();
 
 //Authentication
 builder.Services.AddAuthentication(options =>

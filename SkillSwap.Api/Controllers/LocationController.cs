@@ -2,16 +2,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SkillSwap.Api.Data;
 using SkillSwap.Api.Models;
+using SkillSwap.Api.Services.Location;
 
 [Route("api/[controller]")]
 [ApiController]
 public class LocationController : ControllerBase
 {
     private readonly AppDbContext _context;
+    private readonly ILocationCacheService _cache;
 
-    public LocationController(AppDbContext context)
+    public LocationController(AppDbContext context, ILocationCacheService cache)
     {
         _context = context;
+        _cache = cache;
     }
 
     [HttpPost("update")]
@@ -25,35 +28,15 @@ public class LocationController : ControllerBase
         if (user == null)
             return NotFound();
 
-        // Update user entity
+        // Update user DB for persistence
         user.Latitude = req.Lat;
         user.Longitude = req.Lng;
         user.LocationUpdatedAt = DateTime.UtcNow;
 
-        // Update / insert cache
-        var cache = await _context.UserLocationCaches
-            .FirstOrDefaultAsync(x => x.UserId == userId);
-
-        if (cache == null)
-        {
-            cache = new UserLocationCache
-            {
-                UserId = userId.Value,
-                Latitude = req.Lat,
-                Longitude = req.Lng,
-                UpdatedAt = DateTime.UtcNow
-            };
-
-            _context.UserLocationCaches.Add(cache);
-        }
-        else
-        {
-            cache.Latitude = req.Lat;
-            cache.Longitude = req.Lng;
-            cache.UpdatedAt = DateTime.UtcNow;
-        }
-
         await _context.SaveChangesAsync();
+
+        // Write to Redis cache
+        await _cache.SetLocationAsync(userId.Value, req.Lat, req.Lng);
 
         return Ok(new { message = "Location updated" });
     }

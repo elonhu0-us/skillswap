@@ -434,3 +434,8 @@ C:\Users\Hai\Documents\skillswap\SkillSwap.Tests\obj\Debug\net10.0\refint\SkillS
 C:\Users\Hai\Documents\skillswap\SkillSwap.Tests\obj\Debug\net10.0\SkillSwap.Tests.pdb
 C:\Users\Hai\Documents\skillswap\SkillSwap.Tests\obj\Debug\net10.0\SkillSwap.Tests.genruntimeconfig.cache
 C:\Users\Hai\Documents\skillswap\SkillSwap.Tests\obj\Debug\net10.0\ref\SkillSwap.Tests.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Tests\bin\Debug\net10.0\SkillSwap.Api.staticwebassets.runtime.json
+C:\Users\Hai\Documents\skillswap\SkillSwap.Tests\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Tests\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Tests\bin\Debug\net10.0\StackExchange.Redis.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Tests\bin\Debug\net10.0\System.IO.Hashing.dll

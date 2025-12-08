@@ -1,61 +1,50 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using SkillSwap.Api.Data;
 using SkillSwap.Api.Models;
-
+using SkillSwap.Api.Services;
+using SkillSwap.Api.Services.Skill;
+using SkillSwap.Api.Services.Location;
 namespace SkillSwap.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class SkillsController : ControllerBase
     {
-        private readonly AppDbContext _db;
+        private readonly ISkillService _skillService;
+        private readonly ILocationCacheService _locationCache;
 
-        public SkillsController(AppDbContext db)
+        public SkillsController(ISkillService skillService, ILocationCacheService locationCache)
         {
-            _db = db;
+            _skillService = skillService;
+            _locationCache = locationCache;
         }
 
-        // GET: api/skills?userLat=0&userLng=0&radiusMiles=50
-        // Currently does NOT filter by distance (future-use)
-        [HttpGet]
-        public async Task<IActionResult> GetSkills(
-            [FromQuery] double userLat,
-            [FromQuery] double userLng,
-            [FromQuery] double radiusMiles = 50)
+        // GET api/skills/radius?userId=1&radius=50
+        [HttpGet("radius")]
+        public async Task<IActionResult> GetByRadius([FromQuery] int userId, [FromQuery] double radius = 50)
         {
-            var skills = await _db.SkillPosts.ToListAsync();
+            var loc = await _locationCache.GetLocationAsync(userId);
+            if (loc == null) return BadRequest("User location not found.");
+
+            var skills = await _skillService.GetNearbySkillsAsync(loc.Value.lat, loc.Value.lng, radius);
             return Ok(skills);
         }
 
-        // GET: api/skills/search?query=plumbing
+        // GET api/skills/search?query=xxx
         [HttpGet("search")]
-        public async Task<IActionResult> SearchSkills([FromQuery] string query)
+        public async Task<IActionResult> Search([FromQuery] string query)
         {
-            if (string.IsNullOrWhiteSpace(query))
-                return BadRequest("Search query required.");
-
-            var results = await _db.SkillPosts
-                .Where(s =>
-                    s.Title.Contains(query) ||
-                    s.Description.Contains(query) ||
-                    s.Type.Contains(query)
-                )
-                .ToListAsync();
-
-            return Ok(results);
+            if (string.IsNullOrWhiteSpace(query)) return BadRequest("query required");
+            var res = await _skillService.SearchSkillsAsync(query);
+            return Ok(res);
         }
 
+        // POST api/skills
         [HttpPost]
-        public async Task<IActionResult> CreateSkill([FromBody] SkillPost post)
+        public async Task<IActionResult> Create([FromBody] SkillPost post)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            _db.SkillPosts.Add(post);
-            await _db.SaveChangesAsync();
-
-            return Ok(post);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var created = await _skillService.CreateSkillAsync(post);
+            return Ok(created);
         }
     }
 }

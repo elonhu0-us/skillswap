@@ -21,4 +21,5 @@ export class MarketplaceService {
       `${this.baseUrl}/search?query=${query}`
     );
   }
+
 }

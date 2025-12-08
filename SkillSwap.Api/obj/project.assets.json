@@ -486,6 +486,22 @@
           }
         }
       },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "StackExchange.Redis": "2.7.27"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyModel/9.0.0": {
         "type": "package",
         "compile": {
@@ -637,6 +653,19 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Pomelo.EntityFrameworkCore.MySql/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -650,6 +679,23 @@
         },
         "runtime": {
           "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "StackExchange.Redis/2.10.1": {
+        "type": "package",
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "2.2.8",
+          "System.IO.Hashing": "9.0.10"
+        },
+        "compile": {
+          "lib/net8.0/StackExchange.Redis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/StackExchange.Redis.dll": {
             "related": ".xml"
           }
         }
@@ -795,6 +841,22 @@
           "lib/net9.0/System.IdentityModel.Tokens.Jwt.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.IO.Hashing/9.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       }
     }
@@ -1939,6 +2001,26 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.0": {
+      "sha512": "LTduPLaoP8T8I/SEKTEks7a7ZCnqlGmX6/7Y4k/nFlbKFsv8oLxhLQ44ktF9ve0lAmEGkLuuvRhunG/LQuhP7Q==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.stackexchangeredis/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "lib/net462/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/net462/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "microsoft.extensions.caching.stackexchangeredis.10.0.0.nupkg.sha512",
+        "microsoft.extensions.caching.stackexchangeredis.nuspec"
+      ]
+    },
     "Microsoft.Extensions.DependencyModel/9.0.0": {
       "sha512": "saxr2XzwgDU77LaQfYFXmddEDRUKHF4DaGMZkNB3qjdVSZlax3//dGJagJkKrGMIPNZs2jVFXITyCCR6UHJNdA==",
       "type": "package",
@@ -2166,6 +2248,29 @@
         "mysqlconnector.nuspec"
       ]
     },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "sha512": "zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "type": "package",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Pipelines.Sockets.Unofficial.dll",
+        "lib/net461/Pipelines.Sockets.Unofficial.xml",
+        "lib/net472/Pipelines.Sockets.Unofficial.dll",
+        "lib/net472/Pipelines.Sockets.Unofficial.xml",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.xml",
+        "pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+        "pipelines.sockets.unofficial.nuspec"
+      ]
+    },
     "Pomelo.EntityFrameworkCore.MySql/9.0.0": {
       "sha512": "cl7S4s6CbJno0LjNxrBHNc2xxmCliR5i40ATPZk/eTywVaAbHCbdc9vbGc3QThvwGjHqrDHT8vY9m1VF/47o0g==",
       "type": "package",
@@ -2179,6 +2284,30 @@
         "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.xml",
         "pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512",
         "pomelo.entityframeworkcore.mysql.nuspec"
+      ]
+    },
+    "StackExchange.Redis/2.10.1": {
+      "sha512": "se08WZvD42H3bV4XBW07pupTiE2/72qStKyi/lRqqcijksFWfRtwLTuhFtZ4OX19f4+we/2qruFZBXYJBFc8PQ==",
+      "type": "package",
+      "path": "stackexchange.redis/2.10.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net461/StackExchange.Redis.dll",
+        "lib/net461/StackExchange.Redis.xml",
+        "lib/net472/StackExchange.Redis.dll",
+        "lib/net472/StackExchange.Redis.xml",
+        "lib/net6.0/StackExchange.Redis.dll",
+        "lib/net6.0/StackExchange.Redis.xml",
+        "lib/net8.0/StackExchange.Redis.dll",
+        "lib/net8.0/StackExchange.Redis.xml",
+        "lib/netcoreapp3.1/StackExchange.Redis.dll",
+        "lib/netcoreapp3.1/StackExchange.Redis.xml",
+        "lib/netstandard2.0/StackExchange.Redis.dll",
+        "lib/netstandard2.0/StackExchange.Redis.xml",
+        "stackexchange.redis.2.10.1.nupkg.sha512",
+        "stackexchange.redis.nuspec"
       ]
     },
     "System.CodeDom/6.0.0": {
@@ -2383,6 +2512,34 @@
         "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
+    },
+    "System.IO.Hashing/9.0.10": {
+      "sha512": "9gv5z71xaWWmcGEs4bXdreIhKp2kYLK2fvPK5gQkgnWMYvZ8ieaxKofDjxL3scZiEYfi/yW2nJTiKV2awcWEdA==",
+      "type": "package",
+      "path": "system.io.hashing/9.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.IO.Hashing.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.IO.Hashing.targets",
+        "lib/net462/System.IO.Hashing.dll",
+        "lib/net462/System.IO.Hashing.xml",
+        "lib/net8.0/System.IO.Hashing.dll",
+        "lib/net8.0/System.IO.Hashing.xml",
+        "lib/net9.0/System.IO.Hashing.dll",
+        "lib/net9.0/System.IO.Hashing.xml",
+        "lib/netstandard2.0/System.IO.Hashing.dll",
+        "lib/netstandard2.0/System.IO.Hashing.xml",
+        "system.io.hashing.9.0.10.nupkg.sha512",
+        "system.io.hashing.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -2392,7 +2549,9 @@
       "Microsoft.AspNetCore.OpenApi >= 9.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0",
-      "Pomelo.EntityFrameworkCore.MySql >= 9.0.0"
+      "Microsoft.Extensions.Caching.StackExchangeRedis >= 10.0.0",
+      "Pomelo.EntityFrameworkCore.MySql >= 9.0.0",
+      "StackExchange.Redis >= 2.10.1"
     ]
   },
   "packageFolders": {
@@ -2460,9 +2619,17 @@
             "target": "Package",
             "version": "[9.0.0, )"
           },
+          "Microsoft.Extensions.Caching.StackExchangeRedis": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          },
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "StackExchange.Redis": {
+            "target": "Package",
+            "version": "[2.10.1, )"
           }
         },
         "imports": [

@@ -130,6 +130,7 @@ C:\Users\Hai\Documents\skillswap\SkillSwap.Api\obj\Debug\net10.0\SkillSwap.Api.M
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\obj\Debug\net10.0\SkillSwap.Api.sourcelink.json
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\appsettings.json
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\SkillSwap.Api.staticwebassets.runtime.json
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\SkillSwap.Api.staticwebassets.endpoints.json
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\SkillSwap.Api.exe
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\SkillSwap.Api.deps.json
@@ -152,6 +153,7 @@ C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.Entit
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -162,7 +164,9 @@ C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.Ident
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Microsoft.OpenApi.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Mono.TextTemplating.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\MySqlConnector.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\StackExchange.Redis.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\System.CodeDom.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\System.Composition.AttributedModel.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\System.Composition.Convention.dll
@@ -170,6 +174,7 @@ C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\System.Composit
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\System.Composition.Runtime.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\System.Composition.TypedParts.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\System.IO.Hashing.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Hai\Documents\skillswap\SkillSwap.Api\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll

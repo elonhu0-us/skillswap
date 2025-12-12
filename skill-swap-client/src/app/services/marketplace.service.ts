@@ -1,25 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs';
+
+export interface SkillPost {
+  id: number;
+  ownerId: number;
+  title: string;
+  description: string;
+  type: string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class MarketplaceService {
-  private baseUrl = `${environment.apiUrl}/skills`;
+  private apiUrl = '/api/skills';
 
   constructor(private http: HttpClient) {}
 
-  getSkills(lat: number, lng: number) {
-    return this.http.get<any[]>(
-      `${this.baseUrl}?userLat=${lat}&userLng=${lng}&radiusMiles=50`
+  getNearbySkills(lat: number, lng: number, radius: number = 50): Observable<SkillPost[]> {
+    return this.http.get<SkillPost[]>(
+      `${this.apiUrl}/nearby?lat=${lat}&lng=${lng}&radius=${radius}`
     );
   }
 
-  searchSkills(query: string) {
-    return this.http.get<any[]>(
-      `${this.baseUrl}/search?query=${query}`
-    );
+  searchSkills(query: string): Observable<SkillPost[]> {
+    return this.http.get<SkillPost[]>(`${this.apiUrl}/search?query=${query}`);
   }
-
 }

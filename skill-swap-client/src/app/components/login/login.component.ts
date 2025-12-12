@@ -22,7 +22,7 @@ export class LoginComponent {
             next: (res) => {
                 this.authService.setToken(res.token);
                 alert("Login successful");
-                this.router.navigate(["/"]);//homepage
+                this.router.navigate(["/marketplace"]);
             },
             error: (err) => {
                 console.error("Login failed", err);

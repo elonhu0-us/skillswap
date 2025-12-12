@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using SkillSwap.Api.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.Extensions.Caching.StackExchangeRedis;
 using StackExchange.Redis;
 using System.Text;
 
@@ -10,26 +9,38 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-var conn = builder.Configuration.GetConnectionString("DefaultConnection") 
+// DB
+var conn = builder.Configuration.GetConnectionString("DefaultConnection")
            ?? "Server=127.0.0.1;Port=3306;Database=skillswap;User=root;Password=Passw0rd!;";
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(conn, ServerVersion.AutoDetect(conn)));
+
+// Redis ConnectionMultiplexer FIRST
+builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+{
+    var redisConn = builder.Configuration.GetConnectionString("Redis") ?? "localhost:6379";
+
+    var cfg = ConfigurationOptions.Parse(redisConn);
+    cfg.AbortOnConnectFail = false; // prevents crash
+
+    return ConnectionMultiplexer.Connect(cfg);
+});
+
+
+// Redis Cache wrapper
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetConnectionString("Redis");
 });
-// Redis connection multiplexer
-builder.Services.AddSingleton(sp =>
-{
-    var cfg = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"));
-    return ConnectionMultiplexer.Connect(cfg);
-});
 
-// register cache + skill service
-builder.Services.AddScoped<SkillSwap.Api.Services.Skill.ISkillService, SkillSwap.Api.Services.Skill.SkillService>();
-builder.Services.AddScoped<SkillSwap.Api.Services.Location.ILocationCacheService, SkillSwap.Api.Services.Location.RedisLocationCacheService>();
+// services
+builder.Services.AddScoped<SkillSwap.Api.Services.Skill.ISkillService,
+                           SkillSwap.Api.Services.Skill.SkillService>();
 
-//Authentication
+builder.Services.AddScoped<SkillSwap.Api.Services.Location.ILocationCacheService,
+                           SkillSwap.Api.Services.Location.RedisLocationCacheService>();
+
+// Auth
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -50,12 +61,10 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
-
 var app = builder.Build();
 
 app.UseHttpsRedirection();
-app.MapControllers();
 app.UseAuthentication();
 app.UseAuthorization();
+app.MapControllers();
 app.Run();

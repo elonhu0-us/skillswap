@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillSwap.Api", "SkillSwap.Api\SkillSwap.Api.csproj", "{C0B2E349-3400-00BA-6027-062C81700DFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillSwap.Tests", "SkillSwap.Tests\SkillSwap.Tests.csproj", "{0746774A-01CC-D3F6-30F7-04E122415F96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0B2E349-3400-00BA-6027-062C81700DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0B2E349-3400-00BA-6027-062C81700DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0B2E349-3400-00BA-6027-062C81700DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0B2E349-3400-00BA-6027-062C81700DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0746774A-01CC-D3F6-30F7-04E122415F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0746774A-01CC-D3F6-30F7-04E122415F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0746774A-01CC-D3F6-30F7-04E122415F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0746774A-01CC-D3F6-30F7-04E122415F96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5CDA843-FE16-42A8-856F-ACDC9C5D89A4}
+	EndGlobalSection
+EndGlobal

@@ -2555,19 +2555,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hai\\.nuget\\packages\\": {}
+    "C:\\Users\\Elon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Api\\SkillSwap.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Elon\\Git_Project\\skillswap\\SkillSwap.Api\\SkillSwap.Api.csproj",
       "projectName": "SkillSwap.Api",
-      "projectPath": "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Api\\SkillSwap.Api.csproj",
-      "packagesPath": "C:\\Users\\Hai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Api\\obj\\",
+      "projectPath": "C:\\Users\\Elon\\Git_Project\\skillswap\\SkillSwap.Api\\SkillSwap.Api.csproj",
+      "packagesPath": "C:\\Users\\Elon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Elon\\Git_Project\\skillswap\\SkillSwap.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hai\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Elon\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -2651,7 +2651,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

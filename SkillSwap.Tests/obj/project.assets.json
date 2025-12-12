@@ -3441,19 +3441,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hai\\.nuget\\packages\\": {}
+    "C:\\Users\\Elon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Tests\\SkillSwap.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Elon\\Git_Project\\skillswap\\SkillSwap.Tests\\SkillSwap.Tests.csproj",
       "projectName": "SkillSwap.Tests",
-      "projectPath": "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Tests\\SkillSwap.Tests.csproj",
-      "packagesPath": "C:\\Users\\Hai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Tests\\obj\\",
+      "projectPath": "C:\\Users\\Elon\\Git_Project\\skillswap\\SkillSwap.Tests\\SkillSwap.Tests.csproj",
+      "packagesPath": "C:\\Users\\Elon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Elon\\Git_Project\\skillswap\\SkillSwap.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hai\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Elon\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -3465,8 +3465,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Api\\SkillSwap.Api.csproj": {
-              "projectPath": "C:\\Users\\Hai\\Documents\\skillswap\\SkillSwap.Api\\SkillSwap.Api.csproj"
+            "C:\\Users\\Elon\\Git_Project\\skillswap\\SkillSwap.Api\\SkillSwap.Api.csproj": {
+              "projectPath": "C:\\Users\\Elon\\Git_Project\\skillswap\\SkillSwap.Api\\SkillSwap.Api.csproj"
             }
           }
         }
@@ -3528,7 +3528,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

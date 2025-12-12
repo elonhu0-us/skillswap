@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SkillSwap.Api.Data;
@@ -16,7 +17,7 @@ public class LocationController : ControllerBase
         _context = context;
         _cache = cache;
     }
-
+    [Authorize]
     [HttpPost("update")]
     public async Task<IActionResult> UpdateLocation([FromBody] LocationRequest req)
     {

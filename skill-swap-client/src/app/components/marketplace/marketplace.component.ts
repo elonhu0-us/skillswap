@@ -1,83 +1,50 @@
 import { Component, OnInit } from '@angular/core';
-import { MarketplaceService } from '../../services/marketplace.service';
+import { CommonModule } from '@angular/common';
+import { MarketplaceService, SkillPost } from '../../services/marketplace.service';
+import { LocationService } from '../../services/location.service';
 
 @Component({
   selector: 'app-marketplace',
   templateUrl: './marketplace.component.html',
-  styleUrls: ['./marketplace.component.scss']
+  styleUrls: ['./marketplace.component.scss'],
+  standalone: true,
+  imports: [CommonModule]
 })
+
 export class MarketplaceComponent implements OnInit {
-  skills: any[] = [];
-  loading = false;
-  searchQuery = '';
-  userLat: number | null = null;
-  userLng: number | null = null;
 
-  constructor(private marketplaceService: MarketplaceService) {}
+  skills: SkillPost[] = [];
+  loading = true;
+  error = '';
 
-  ngOnInit(): void {
-    this.getUserLocation();
-  }
+  constructor(
+    private marketplaceService: MarketplaceService,
+    private locationService: LocationService
+  ) {}
 
-  getUserLocation() {
-    this.loading = true;
+  async ngOnInit() {
+    try {
+      const loc = await this.locationService.getBrowserLocation();
 
-    if (!navigator.geolocation) {
-      alert("Geolocation not supported.");
+      // update backend user cache
+      await this.locationService.updateLocation(loc.lat, loc.lng).toPromise();
+
+      // fetch radius-filtered skills
+      this.marketplaceService.getNearbySkills(loc.lat, loc.lng, 50)
+        .subscribe({
+          next: data => {
+            this.skills = data;
+            this.loading = false;
+          },
+          error: err => {
+            this.error = 'Failed to load skills';
+            this.loading = false;
+          }
+        });
+
+    } catch (err) {
+      this.error = 'Could not access location.';
       this.loading = false;
-      return;
     }
-
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        this.userLat = pos.coords.latitude;
-        this.userLng = pos.coords.longitude;
-
-        // Fetch marketplace skills
-        this.loadSkills();
-      },
-      (err) => {
-        console.error(err);
-        alert("Unable to get your location.");
-        this.loading = false;
-      }
-    );
-  }
-
-  loadSkills() {
-    if (this.userLat == null || this.userLng == null) return;
-
-    this.marketplaceService
-      .getSkills(this.userLat, this.userLng)
-      .subscribe({
-        next: (res) => {
-          this.skills = res;
-          this.loading = false;
-        },
-        error: (err) => {
-          console.error(err);
-          this.loading = false;
-        }
-      });
-  }
-
-  searchSkills() {
-    if (!this.searchQuery.trim()) {
-      this.loadSkills();
-      return;
-    }
-
-    this.loading = true;
-
-    this.marketplaceService.searchSkills(this.searchQuery).subscribe({
-      next: (res) => {
-        this.skills = res;
-        this.loading = false;
-      },
-      error: (err) => {
-        console.error(err);
-        this.loading = false;
-      }
-    });
   }
 }

@@ -1,23 +1,15 @@
-<div class="marketplace-container">
+<div class="container">
 
-  <!-- Search bar -->
-  <div class="search-box">
-    <input
-      type="text"
-      placeholder="Search skills..."
-      [(ngModel)]="searchQuery"
-      (input)="searchSkills()"
-    />
-  </div>
+  <h2>Nearby Skills</h2>
 
-  <!-- Skill cards -->
-  <div class="cards">
-    <div class="skill-card" *ngFor="let s of skills">
-      <h3>{{ s.title }}</h3>
-      <p class="type">{{ s.type | titlecase }}</p>
-      <p class="description">{{ s.description }}</p>
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="error">{{ error }}</div>
 
-      <button (click)="viewSkill(s.id)">View</button>
+  <div class="grid">
+    <div *ngFor="let skill of skills" class="card">
+      <h3>{{ skill.title }}</h3>
+      <p>{{ skill.description }}</p>
+      <span class="tag">{{ skill.type }}</span>
     </div>
   </div>
 
